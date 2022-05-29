@@ -1,0 +1,44 @@
+$primary-color: #282828;
+$secondary-color: #92dce5;
+// $secondary-color: #219ebc;
+// $secondary-color: #9bf6ff;
+// $secondary-color: #fef9a7;
+$secondary-color: #ffd24c;
+// $secondary-color: #ff89ff;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@mixin transitionEase {
+    transition: all 0.5s ease-in-out;
+}
+
+@function setTextColor($color) {
+    @if(lightness($color) > 40%){
+        @return #000;
+    } 
+    @else{
+        @return #fff
+    }
+};
+
+
+@mixin medium {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin large {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin extraLarge {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}

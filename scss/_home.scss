@@ -1,0 +1,72 @@
+.home {
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: 
+        linear-gradient(
+            to left,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.3)
+        ),
+        url('/dist/images/img5.jpg') center right;
+    // background: url('/dist/images/img4.jpeg');
+    // background: url('/dist/images/ps2.jpg');
+    background-size: cover;
+
+    &__name{
+        font-size: 3.5rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0rem;
+        // border-bottom: 2px solid setTextColor($primary-color);
+        
+       
+        
+        
+
+        &--last{
+            color: $secondary-color;
+            font-weight: 700;
+        }
+        
+          
+    }
+    .line-1{
+        position: relative;
+        // top: 50%;  
+        // width: 24em;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255,255,255,.75);
+        // font-size: 180%;
+        // text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        // transform: translateY(-50%);    
+    }
+    .anim-typewriter{
+        // background: teal;
+            animation: typewriter 4s steps(30) 1s 1 normal both,
+                       blinkTextCursor 500ms steps(30) infinite normal;
+          }
+          @keyframes typewriter{
+            from{width: 0%;}
+            to{width: 100%;}
+          }
+          @keyframes blinkTextCursor{
+            from{border-right-color: rgba(255,255,255,.75);}
+            to{border-right-color: transparent;}
+          }
+
+
+    .border-top{
+        padding-top: 1rem;
+        border-top: 2px solid setTextColor($primary-color);
+    }
+    
+
+    
+} 
+
+
+
